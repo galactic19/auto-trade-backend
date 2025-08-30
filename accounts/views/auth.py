@@ -123,6 +123,7 @@ def fn_au10001(data):
 
     # 3. http POST 요청
     response = requests.post(url, headers=headers, json=data)
+    print(response.json())
     return response
 
 def fn_au10002(data):
