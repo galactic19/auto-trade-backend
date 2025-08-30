@@ -31,6 +31,7 @@ def get_access_token(request, *args, **kwargs):
     Raises:
         None
     """
+
     if request.method == 'GET':
         user = request.user
 
@@ -93,6 +94,7 @@ def _build_revocation_payload(user_obj, token):
     Returns:
     dict: 토큰 폐기 요청에 필요한 페이로드를 딕셔너리 형태로 반환
     """
+
     return {
         'appkey': user_obj.api_key,
         'secretkey': user_obj.secret_key,
@@ -111,7 +113,7 @@ def delete_access_token(request, *args, **kwargs):
     # username 대신 pk 기반 조회, 토큰을 미리 로딩
     user_obj = get_user_model().objects.select_related('user_token').get(pk=user.pk)
 
-    token = _get_user_token_or_none(user_obj) # 토큰 없을 시 None
+    token = _get_user_token_or_none(user_obj)  # 토큰 없을 시 None
     if token is None:
         return Response({'message': 'No token found.'}, status=status.HTTP_404_NOT_FOUND)
 
