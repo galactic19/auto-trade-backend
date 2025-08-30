@@ -7,9 +7,6 @@ from study.models import StudyModel
 from study.serializer import StudySerializer
 
 
-# ... existing code ...
-
-
 class StudyListView(APIView):
     serializer_class = StudySerializer
     permission_classes = (AllowAny,)
