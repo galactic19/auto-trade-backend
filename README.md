@@ -39,8 +39,8 @@ D:/dev/auto-trade/backend/
 
 ### 1. 소스 코드 복제
 ```bash
-git clone [저장소 URL]
-cd backend
+git clone https://github.com/galactic19/auto-trade-backend.git
+cd auto-trade-backend
 ```
 
 ### 2. 가상 환경 생성 및 활성화
