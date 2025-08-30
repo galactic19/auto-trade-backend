@@ -1,9 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Read(/D:\\잡다다운로드/**)"
-    ],
-    "deny": [],
-    "ask": []
-  }
-}
